@@ -1,46 +1,61 @@
-body{
-    background-color: #13141b;
-    color: #ffffff;
-    background-image: url(images/bg-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    height: auto;
+body {
+  background-color: #13141b;
+  color: #ffffff;
+  background-image: url(images/bg-image.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: top;
+  height: auto;
+}
+.modal-content {
+  background-image: url(images/bg-image.jpg), linear-gradient(black, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 22px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+}
+.form-control:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.form-control{
-    background-color:rgba(255, 255, 255, 0.2);
-    padding: 22px;
-    border: none;
-    border-radius: 25px;
+.modal-header {
+  gap: 15px;
 }
-.btn{
-    border-radius: 1.5rem;
-    padding: 9px 20px;
+.btn {
+  border-radius: 1.5rem;
+  padding: 9px 20px;
+}
+input::placeholder {
+  color: white !important;
 }
 
-.btn-privious{
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+.btn-privious {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 .navbar-toggler {
-    border: none;
+  border: none;
 }
-.search-box{
-    position: relative;
+.search-box {
+  position: relative;
 }
 .search-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
-.single-result{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+.single-result {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
-#music-lyrics{
-    display: none;
+#music-lyrics {
+  display: none;
 }
-
-
