@@ -69,8 +69,8 @@ function print(e) {
   surahDiv.innerHTML = `
     <div id="search-terms" class="single-result row align-items-center my-3 p-3">
       <div class="col-md-9">
-        <h3 class="lyrics-name">${e.asma.en.short}</h3>
-        <p class="author lead">Meaning: <span>${e.asma.translation.en}</span></p>
+        <h3>${e.asma.en.short}</h3>
+        <p>Meaning: <span>${e.asma.translation.en}</span></p>
       </div>
       <div class="col-md-3 text-md-right text-center">
         <button onclick="loadSurahDetails(${e.number})" class="btn btn-success" data-toggle="modal" data-target="#surahDetails">Listen Surah</button>
@@ -90,3 +90,15 @@ fetch(`https://quran-endpoint.vercel.app/quran`)
       print(surah);
     });
   });
+document.getElementById("submit-btn").addEventListener("click", () => {
+  document.getElementById("input").value = "";
+  fetch(`https://quran-endpoint.vercel.app/quran`)
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data.data[0]);
+      dataObject = data;
+      dataObject.data.forEach((surah) => {
+        print(surah);
+      });
+    });
+});
